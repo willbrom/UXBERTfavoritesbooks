@@ -138,7 +138,7 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.BookIt
             Date today = simpleDateFormat.parse(simpleDateFormat.format(Calendar.getInstance().getTime()));
             Date date = simpleDateFormat.parse(releaseDate);
 
-            if (date.compareTo(today) >= 0)
+            if (date.compareTo(today) == 0)
                 MyNotification.createNotification(context, title, details);
 
         } catch (Exception e) {
